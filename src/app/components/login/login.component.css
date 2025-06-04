@@ -1,0 +1,17 @@
+.form-control{
+  font-size: 25px;
+}
+@media (max-width: 576px) {
+
+  .btn-success {
+    font-size: 5px;
+
+  }
+}
+button.btn {
+  white-space: nowrap;
+}
+p {
+    white-space: nowrap;
+}
+
