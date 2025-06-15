@@ -39,14 +39,23 @@ a:hover {
 
 .product {
   border-radius: 5px;
-  border: solid 1px var(--main-color);
   transition: box-shadow 0.5s;
   overflow: hidden;
 }
 
 .product:hover {
-  box-shadow: 0 0 10px #11bd1168;
+  box-shadow: 0 0 50px #11bd1168;
 }
+
+.product .btn-main {
+  transform: translateY( 160% );
+  transition: transform 0.2s;
+}
+.product:hover .btn-main {
+    transform: translateY( 0% );
+
+}
+
 
 .font-sm {
   font-size: 12px;

@@ -10,6 +10,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
   {path:'auth' , component:AuthComponent , children:[
@@ -17,9 +18,9 @@ export const routes: Routes = [
     {path:'login' , component:LoginComponent , title:'login'},
     {path:'register' , component:RegisterComponent , title:'register'}
   ]},
-  {path:'main' , component:MainComponent , children:[
+  {path:'main' , component:MainComponent , canActivate:[authGuard] ,children:[
         {path:'' , redirectTo:'home' , pathMatch:'full'},
-    {path:'home' , component:HomeComponent , title:'home'},
+    {path:'home' , component:HomeComponent , title:'home' ,},
     {path:'products' , component:ProductComponent , title:'products'},
     {path:'cart' , component:CartComponent , title:'cart'},
     {path:'brands' , component:BrandsComponent , title:'brands'},
